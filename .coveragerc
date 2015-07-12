@@ -1,0 +1,9 @@
+[run]
+include = projects/*
+omit = projects/tests/*
+
+[report]
+exclude_lines = 
+    pragma: no cover
+    def __str__
+    def get_absolute_url
