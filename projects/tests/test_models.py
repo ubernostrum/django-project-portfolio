@@ -3,7 +3,7 @@ from django.test import TestCase
 from ..models import Project, Version
 
 
-class ProjectManagerTests(TestCase):
+class ProjectTests(TestCase):
     fixtures = ['projects.json']
 
     def test_live_projects(self):
@@ -23,6 +23,14 @@ class ProjectManagerTests(TestCase):
             ['Test Project 1', 'Test Project 2'],
             [p.name for p in Project.objects.live()]
         )
+
+    def test_no_latest_version(self):
+        p = Project.objects.create(
+            name='Test no latest version',
+            slug='test-no-latest-version',
+            status=Project.PUBLIC_STATUS
+        )
+        self.assertTrue(p.latest_version() is None)
 
 
 class VersionManagerTests(TestCase):

@@ -1,5 +1,7 @@
 from django.core.urlresolvers import reverse
-from django.test import TestCase
+from django.test import RequestFactory, TestCase
+
+from .. import views
 
 
 class ProjectViewTests(TestCase):
@@ -58,3 +60,11 @@ class VersionViewTests(TestCase):
                 (version.project.slug, version.version) in
                 expected
             )
+
+    def test_version_detail_no_kwarg(self):
+        factory = RequestFactory()
+        request = factory.get('/projects/1.4/')
+        self.assertRaises(
+            AttributeError,
+            views.VersionDetail.as_view(),
+            request=request, slug='1.4')
