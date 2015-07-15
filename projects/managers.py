@@ -48,6 +48,9 @@ class VersionManager(models.Manager):
     def get_queryset(self):
         return VersionQuerySet(self.model)
 
+    def stable(self):
+        return self.get_queryset().stable()
+
     def update_latest(self, sender, instance, **kwargs):
         """
         Signal handler which ensures that when a Version is saved with

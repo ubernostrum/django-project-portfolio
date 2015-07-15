@@ -37,9 +37,8 @@ class VersionManagerTests(TestCase):
     fixtures = ['projects.json']
 
     def test_stable_query(self):
-        queryset = Version.objects.all()
         self.assertEqual(
-            2, queryset.stable().count()
+            2, Version.objects.stable().count()
         )
 
     def test_latest_toggle(self):
