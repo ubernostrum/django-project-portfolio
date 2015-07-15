@@ -46,8 +46,8 @@ class Project(models.Model):
     slug = models.SlugField(unique=True)
     status = models.IntegerField(choices=STATUS_CHOICES,
                                  default=PUBLIC_STATUS)
-
     description = models.TextField()
+
     package_link = models.URLField(
         blank=True, null=True,
         help_text="URL of the project's package(s)"
