@@ -42,7 +42,11 @@ class VersionDetail(BaseVersionView, generic.DetailView):
                                  "a project slug.")
         if queryset is None:
             queryset = self.get_queryset()
-        queryset = queryset.filter(project__slug=project_slug)
+
+        queryset = queryset.filter(
+            project__slug=project_slug,
+            project__status=Project.PUBLIC_STATUS
+        )
         return super(VersionDetail, self).get_object(queryset)
 
 

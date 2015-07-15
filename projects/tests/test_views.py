@@ -44,6 +44,16 @@ class VersionViewTests(TestCase):
             version.project.slug
         )
 
+    def test_version_detail_non_public(self):
+        url = reverse(
+            'projects_version_detail',
+            kwargs={
+                'project_slug': 'test-project-3',
+                'slug': '1.0'}
+        )
+        resp = self.client.get(url)
+        self.assertEqual(404, resp.status_code)
+
     def test_latest_versions(self):
         expected = [
             ('test-project-1', '1.4'),
