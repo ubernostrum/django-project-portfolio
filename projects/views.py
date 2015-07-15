@@ -56,6 +56,7 @@ class LatestVersionsList(BaseVersionView, generic.ListView):
     Project name.
 
     """
+    template_name = 'projects/latest_versions.html'
     version_filter_kwargs = {
         'is_latest': True,
         'project__status': Project.PUBLIC_STATUS,
