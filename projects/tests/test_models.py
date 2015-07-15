@@ -6,22 +6,22 @@ from ..models import Project, Version
 class ProjectTests(TestCase):
     fixtures = ['projects.json']
 
-    def test_live_projects(self):
+    def test_public_projects(self):
         self.assertEqual(
             4, Project.objects.count()
         )
 
         self.assertEqual(
-            2, Project.objects.live().count()
+            2, Project.objects.public().count()
         )
 
         self.assertEqual(
-            2, Project.objects.all().live().count()
+            2, Project.objects.all().public().count()
         )
 
         self.assertEqual(
             ['Test Project 1', 'Test Project 2'],
-            [p.name for p in Project.objects.live()]
+            [p.name for p in Project.objects.public()]
         )
 
     def test_no_latest_version(self):

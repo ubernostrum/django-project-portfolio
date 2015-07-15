@@ -7,7 +7,7 @@ class BaseProjectView(object):
     model = Project
 
     def get_queryset(self):
-        return super(BaseProjectView, self).get_queryset().live()
+        return super(BaseProjectView, self).get_queryset().public()
 
 
 class BaseVersionView(object):

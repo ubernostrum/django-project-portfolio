@@ -7,7 +7,7 @@ class ProjectQuerySet(models.QuerySet):
     live Projects.
 
     """
-    def live(self):
+    def public(self):
         """
         Return only Projects with 'public' status.
 
