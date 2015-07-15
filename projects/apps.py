@@ -15,5 +15,5 @@ class ProjectsConfig(AppConfig):
         post_save.connect(
             Version.objects.update_latest,
             sender=Version,
-            dispatch_uid="project_version_latest_toggle"
+            dispatch_uid="projects_version_latest_toggle"
         )
