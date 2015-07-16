@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(name='django-project-portfolio',
       version='1.0',
-      zip_safe=False, # eggs are the devil.
+      zip_safe=False,  # eggs are the devil.
       description='A Django application for listing your software projects.',
       long_description=open(os.path.join(os.path.dirname(__file__),
                                          'README.rst')).read(),
