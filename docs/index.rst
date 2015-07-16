@@ -1,22 +1,17 @@
-.. django-project-portfolio documentation master file, created by
-   sphinx-quickstart on Sun Jul 12 06:00:20 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+django-project-portfolio |version|
+==================================
 
-Welcome to django-project-portfolio's documentation!
-====================================================
+``django-project-portfolio`` is a simple `Django
+<https://www.djangoproject.com/>`_ for displaying information about
+software projects you maintain.
 
-Contents:
+
+Documentation contents
+----------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+   install
+   models
+   views
