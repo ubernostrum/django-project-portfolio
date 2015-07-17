@@ -111,7 +111,7 @@ class Version(models.Model):
     is_latest = models.BooleanField(default=False)
 
     status = models.IntegerField(choices=STATUS_CHOICES,
-                                 default=PLANNING_STATUS)
+                                 default=STABLE_STATUS)
     license = models.ForeignKey(License)
     release_date = models.DateField(default=datetime.date.today)
 

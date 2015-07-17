@@ -14,8 +14,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='License',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('name', models.CharField(unique=True, max_length=255)),
+                ('id', models.AutoField(primary_key=True, auto_created=True, serialize=False, verbose_name='ID')),
+                ('name', models.CharField(max_length=255, unique=True)),
                 ('slug', models.SlugField(unique=True)),
                 ('link', models.URLField()),
             ],
@@ -26,15 +26,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Project',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('name', models.CharField(unique=True, max_length=255)),
+                ('id', models.AutoField(primary_key=True, auto_created=True, serialize=False, verbose_name='ID')),
+                ('name', models.CharField(max_length=255, unique=True)),
                 ('slug', models.SlugField(unique=True)),
-                ('status', models.IntegerField(default=1, choices=[(0, b'Hidden'), (1, b'Public')])),
+                ('status', models.IntegerField(choices=[(0, 'Hidden'), (1, 'Public')], default=1)),
                 ('description', models.TextField()),
-                ('package_link', models.URLField(help_text=b"URL of the project's package(s)", null=True, blank=True)),
-                ('repository_link', models.URLField(help_text=b"URL of the project's repostory", null=True, blank=True)),
-                ('documentation_link', models.URLField(help_text=b"URL of the project's documentation", null=True, blank=True)),
-                ('tests_link', models.URLField(help_text=b"URL of the project's tests/continuous integration", null=True, blank=True)),
+                ('package_link', models.URLField(blank=True, help_text="URL of the project's package(s)", null=True)),
+                ('repository_link', models.URLField(blank=True, help_text="URL of the project's repostory", null=True)),
+                ('documentation_link', models.URLField(blank=True, help_text="URL of the project's documentation", null=True)),
+                ('tests_link', models.URLField(blank=True, help_text="URL of the project's tests/continuous integration", null=True)),
             ],
             options={
                 'ordering': ('name',),
@@ -43,10 +43,10 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Version',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('id', models.AutoField(primary_key=True, auto_created=True, serialize=False, verbose_name='ID')),
                 ('version', models.CharField(max_length=255)),
                 ('is_latest', models.BooleanField(default=False)),
-                ('status', models.IntegerField(default=1, choices=[(1, b'Planning'), (2, b'Pre-Alpha'), (3, b'Alpha'), (4, b'Beta'), (5, b'Stable')])),
+                ('status', models.IntegerField(choices=[(1, 'Planning'), (2, 'Pre-Alpha'), (3, 'Alpha'), (4, 'Beta'), (5, 'Stable')], default=5)),
                 ('release_date', models.DateField(default=datetime.date.today)),
                 ('license', models.ForeignKey(to='projects.License')),
                 ('project', models.ForeignKey(related_name='versions', to='projects.Project')),
