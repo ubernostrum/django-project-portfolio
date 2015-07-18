@@ -28,6 +28,10 @@ SETTINGS_DICT = {
             'NAME': os.path.join(APP_DIR, 'db.sqlite3'),
         },
     },
+    'MIDDLEWARE_CLASSES': (
+        'django.middleware.common.CommonMiddleware',
+        'django.middleware.csrf.CsrfViewMiddleware',
+    ),
     'TEMPLATE_DIRS': (
         os.path.join(APP_DIR, 'tests/templates'),
     ),
