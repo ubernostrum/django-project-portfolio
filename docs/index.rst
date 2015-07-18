@@ -5,6 +5,12 @@ django-project-portfolio |version|
 <https://www.djangoproject.com/>`_ application for displaying
 information about software projects you maintain.
 
+:ref:`Models <models>` are included for storing information about
+projects, versions of projects, the status of each release and
+associated metadata including licensing and location of packages,
+source code, documentation and continuous integration. :ref:`Built-in
+views <views>` are provided for basic display of this information.
+
 
 Documentation contents
 ----------------------
