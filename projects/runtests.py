@@ -20,7 +20,7 @@ sys.path.insert(0, APP_DIR)
 # Minimum settings required for the app's tests.
 SETTINGS_DICT = {
     'BASE_DIR': APP_DIR,
-    'INSTALLED_APPS': ('projects',),
+    'INSTALLED_APPS': ('projects.apps.ProjectsConfig',),
     'ROOT_URLCONF': 'projects.urls',
     'DATABASES': {
         'default': {

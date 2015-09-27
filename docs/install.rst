@@ -64,3 +64,25 @@ of the repository by typing::
 From there, you can use normal git commands to check out the specific
 revision you want, and install it using ``python setup.py install``.
 
+
+Basic use
+---------
+
+You'll need to add ``django-project-portfolio`` to your Django-based
+project; since this application makes use of a custom signal which
+needs to be set up, it's done via `a Django AppConfig
+<https://docs.djangoproject.com/en/1.8/ref/applications/#configuring-applications>`_
+subclass. So rather than adding ``projects`` to your
+``INSTALLED_APPS`` setting, instead add
+``projects.apps.ProjectsConfig``, like so::
+
+    INSTALLED_APPS = [
+        # ... other apps here
+       'projects.apps.ProjectsConfig',
+    ]
+
+Then run ``manage.py migrate`` to set up the required database tables,
+and you can start adding instances of :ref:`the provided models
+<models>` though the Django admin interface, and wiring up :ref:`the
+provided views <views>` in your URLconf.
+
