@@ -12,8 +12,25 @@ which offers convenient packaged downloads and installation
 instructions.
 
 The |version| release of ``django-project-portfolio`` supports Django
-1.7 and 1.8, on any of Python 2.7, 3.3 or 3.4. Older versions of
-Django and/or Python are not supported.
+1.8 and 1.9, on any of Python version supported by those versions of
+Django:
+
+* Django 1.8 suports Python 2.7, 3.2, 3.3, 3.4 and 3.5.
+
+* Django 1.9 supports Python 2.7, 3.4 and 3.5.
+
+.. important:: **Python 3.2**
+
+   Although Django 1.8 supports Python 3.2, and
+   ``django-project-portfolio`` |version| supports it, many Python
+   libraries supporting Python 3 impose a minimum requirement of
+   Python 3.3 (due to conveniences added in Python 3.3 which make
+   supporting Python 2 and 3 in the same codebase much simpler).
+
+   As a result, use of Python 3.2 is discouraged; Django 1.9 has
+   already dropped support for it, and a future release of
+   ``django-project-portfolio`` will likely drop Python 3.2 support as
+   well.
 
 
 Normal installation
