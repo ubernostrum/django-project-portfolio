@@ -20,7 +20,9 @@ sys.path.insert(0, APP_DIR)
 # Minimum settings required for the app's tests.
 SETTINGS_DICT = {
     'BASE_DIR': APP_DIR,
-    'INSTALLED_APPS': ('projects.apps.ProjectsConfig',),
+    'INSTALLED_APPS': ('projects.apps.ProjectsConfig',
+                       'django.contrib.auth',
+                       'django.contrib.contenttypes'),
     'ROOT_URLCONF': 'projects.urls',
     'DATABASES': {
         'default': {
