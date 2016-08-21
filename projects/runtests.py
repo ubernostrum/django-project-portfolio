@@ -34,9 +34,21 @@ SETTINGS_DICT = {
         'django.middleware.common.CommonMiddleware',
         'django.middleware.csrf.CsrfViewMiddleware',
     ),
-    'TEMPLATE_DIRS': (
-        os.path.join(APP_DIR, 'tests/templates'),
-    ),
+    'TEMPLATES': [{
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(APP_DIR, 'tests/templates')],
+        'OPTIONS': {
+            'context_processors': [
+                'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.tz',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    }],
 }
 
 
