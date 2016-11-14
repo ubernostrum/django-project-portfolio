@@ -11,4 +11,4 @@ of each release, and associated metadata including licensing and the
 location of packages/source code/documentation/continuous integration.
 
 Documentation is included and is also `available online
-<http://django-project-portfolio.readthedocs.org/>`_.
+<http://django-project-portfolio.readthedocs.io/>`_.

@@ -5,7 +5,7 @@
 Models for software projects
 ============================
 
-``django-project-portfolio`` provides three models which work together
+django-project-portfolio provides three models which work together
 to describe software projects: :class:`~Project` represents a software
 project, :class:`~Version` represents a particular version of a
 project, and :class:`~License` represents the license under which a
@@ -34,7 +34,7 @@ particular version is released.
 
       A short, descriptive URL-safe string to identify the
       license. Currently there are no views in
-      ``django-project-portfolio`` which make use of this, but the
+      django-project-portfolio which make use of this, but the
       field is provided so that custom views can make use of it.
 
    .. attribute:: link

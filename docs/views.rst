@@ -6,7 +6,7 @@ Views for software projects
 ===========================
 
 
-``django-project-portfolio`` provides four built-in views for
+django-project-portfolio provides four built-in views for
 displaying information about software projects. Though not all
 possible views of the data are included here, the built-in views
 strive to cover the common cases.
