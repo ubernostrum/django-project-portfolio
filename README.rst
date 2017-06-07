@@ -3,8 +3,8 @@
 .. image:: https://travis-ci.org/ubernostrum/django-project-portfolio.svg?branch=master
     :target: https://travis-ci.org/ubernostrum/django-project-portfolio
 
-A simple `Django <https://www.djangoproject.com/>`_ application for
-showing information about software projects you maintain.
+A `Django <https://www.djangoproject.com/>`_ application for showing
+information about software projects you maintain.
 
 Support is included for listing projects, versions of projects, status
 of each release, and associated metadata including licensing and the
