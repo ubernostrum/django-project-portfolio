@@ -6,6 +6,6 @@ on my personal site.
 
 Since it was pretty narrowly tailored to my use case and never really
 gained wider use, I no longer maintain this as a separate application;
-the latest code now lives directly in [the repository of my personal
-site](https://github.com/ubernostrum/b_list). The code in this
+the latest code now lives directly in `the repository of my personal
+site <https://github.com/ubernostrum/b_list>`_. The code in this
 repository is no longer maintained.
