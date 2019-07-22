@@ -1,14 +1,11 @@
 .. -*-restructuredtext-*-
 
-.. image:: https://travis-ci.org/ubernostrum/django-project-portfolio.svg?branch=master
-    :target: https://travis-ci.org/ubernostrum/django-project-portfolio
+This is a Django application I developed, and originally distributed
+standalone, which powers the list of open-source projects I maintain
+on my personal site.
 
-A `Django <https://www.djangoproject.com/>`_ application for showing
-information about software projects you maintain.
-
-Support is included for listing projects, versions of projects, status
-of each release, and associated metadata including licensing and the
-location of packages/source code/documentation/continuous integration.
-
-Documentation is included and is also `available online
-<http://django-project-portfolio.readthedocs.io/>`_.
+Since it was pretty narrowly tailored to my use case and never really
+gained wider use, I no longer maintain this as a separate application;
+the latest code now lives directly in [the repository of my personal
+site](https://github.com/ubernostrum/b_list). The code in this
+repository is no longer maintained.
